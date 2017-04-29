@@ -1,0 +1,81 @@
+<!doctype html>
+<html ng-app="demo">
+<link rel="stylesheet" href="index.css">
+
+<head>
+<title>Users Demo AngularJS</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+<script src="productsDemo.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/foundation/5.4.0/css/normalize.css"/>
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/foundation/5.4.0/css/foundation.css"/>
+		<link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div class="navbarpic">
+<div class="pic" style="margin: 0px 0px 0 20px">
+<img src="https://i.stack.imgur.com/hfHpd.png"><img src="https://i.stack.imgur.com/hfHpd.png"></div>
+</div>
+<nav class="navbar navbar-light ">
+  <div class="container-fluid">
+    <div class="navbar-header">
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <div class="input-group-btn btn-group">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href=#>Categories</a></li>
+        <li><a href="#">Artist</a></li>
+        <li><a href="#">Sale</a></li>
+        <li><a href="#">Contact</a></li>
+     
+  
+      </ul>
+      <ul class="nav navbar-nav navbar-right ">
+      <li><div class="form-group">
+    <input type="text" class="form-control" placeholder="Search">
+ 
+  <button type="submit" class="btn btn-default">Submit</button> 
+  </div>
+</form></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Sign up</a></li>
+      </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="container">
+<div clas="row">
+ <div class="col-sm-3">
+ <ul class="nav nav-pills  nav-stacked">
+  <li role="presentation" class="active"><a href="#">BESTSELLERS</a></li>
+  <li role="presentation"><a href="#">POP &amp ROCK</a></li>
+  <li role="presentation"><a href="#">RAP &amp HIPHOP</a></li>
+    <li role="presentation"><a href="#">Alternative</a></li>
+      <li role="presentation"><a href="#">Metal</a></li>
+        <li role="presentation"><a href="#">Jazz &amp Blues</a></li>
+          <li role="presentation"><a href="#">Classical</a></li>
+            <li role="presentation"><a href="#">Vinyls</a></li>
+</ul>
+ </div>
+  <div class="col-sm-9">
+		<h2>Products</h2>
+	<div ng-controller="Products">
+		<ul class="product-list small-block-grid-3">
+			<li ng-repeat="product in products">
+				<figure>
+					<img ng-src="http://img.freepik.com/darmowe-ikony/p%C5%82yta-cd_318-143354.jpg?size=338&ext=jpg" alt="{{product.author}}">
+					<figcaption>
+						<h5>{{product.name}}</h5>
+						<h6>{{product.author}}</h6>
+						<h6 style="color:red">{{product.price}}$</h6>
+						<button ng-click="">Add to cart</button>
+					</figcaption>
+				</figure>
+			</li>
+		</ul>
+	</div>
+	</div></div>
+	</div>
+</body>
+</html>
